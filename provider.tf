@@ -14,10 +14,10 @@ terraform {
 
 
   backend "remote" {
-   organization = "_organization_"
+   organization = "CN-TEST"
 
     workspaces {
-      name = "_workspace_"
+      name = "utn-gh-actions-demo"
     }
   }
 }
