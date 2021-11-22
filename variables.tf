@@ -11,9 +11,13 @@ variable "subnet1_cidr" {
   description = "Subnet 1 CIDR"
 }
 
+variable "subnet_id" {
+}
+
 variable "subnet1_zone_1a" {
   description = "Zone 1a - Subnet 1"
 }
+
 variable "ami_id" {
   description = "AMI id"
   type = string
@@ -22,6 +26,9 @@ variable "ami_id" {
 variable "subnet1_private_ip" {
   description = "Subnet 1 Private IP"
   type = string
+}
+
+variable "route_table_id"{
 }
 
 variable "key1" {
@@ -40,12 +47,12 @@ variable "instance_type" {
 }
 
 
-variable "vpc1_id" { 
+variable "vpc1_id" {
     description="id vpc"
 
 }
 
 
-variable "internet_gateway_id" { 
+variable "internet_gateway_id" {
     description="id IGW"
 }

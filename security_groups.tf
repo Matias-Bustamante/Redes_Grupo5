@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_icmp_ssh" {
   name        = "allow_icmp_ssh"
   description = "Permite ICMP y SSH"
-  vpc_id      = aws_vpc.main1.id
+  vpc_id      = var.vpc1_id
 
   ingress {
     description = "SSH from Anywere"
@@ -35,7 +35,7 @@ resource "aws_security_group" "allow_icmp_ssh" {
 resource "aws_security_group" "allow_http_https" {
   name        = "allow_http_https"
   description = "Permite HTTP y HTTPS"
-  vpc_id      = aws_vpc.main1.id
+  vpc_id      = var.vpc1_id
 
   ingress {
     description = "HTTP from Anywere"
