@@ -1,10 +1,10 @@
 resource "aws_instance" "server1" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
-  subnet_id                   = var.subnet_id
+  subnet_id                   = aws_subnet.subnet5.id
   associate_public_ip_address = true
-  vpc_security_group_ids      = [aws_security_group.allow_icmp_ssh.id, aws_security_group.allow_http_https.id]
-  private_ip                  = var.subnet1_private_ip
+  vpc_security_group_ids      = [aws_security_group.allow_http_ssh.id]
+  private_ip                  = "172.16.0.17/28"
   key_name                    = var.key1
   user_data                   = file("user-data.sh")
 
