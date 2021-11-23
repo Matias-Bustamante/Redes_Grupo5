@@ -4,19 +4,22 @@
  * [Creando la subnet](#Declarando-la-subnet-y-asociándola-a-una-tabla-de-ruteo)
  * [Reglas de tráfico](#Definición-de-reglas-de-tráfico)
  * [Configurando instancia](#Configurando-la-subnet-en-la-instancia-EC2)
+ * [Pull Request](#Pull-Request)
+ * [Esquema](#Esquema)
+
 
 ## Introducción
 El presente laboratorio consiste en crear una subnet en una VPC dada. Se nos brinda la VPC y el workflow de GitHub para desplegar la subnet.
 Primero creamos un repositorio en GitHub e incluímos el workflow. 
 <p align="center">
-  <img src=""> <br>
-  Fig.x Creación del repositorio en GitHub
+  <img src="images/repositorio_inicial.jpg"> <br>
+  Fig.1 Creación del repositorio en GitHub
 </p>
 
 Este workflow utiliza una API Key, una Organización y un Workspace de Terraform Cloud. Estos datos son cargados en forma de secrets en el repositorio creado. 
 <p align="center">
-  <img src=""> <br>
-  Fig. x Carga de secrets en repositorio
+  <img src="/images/github_secrets.JPG"> <br>
+  Fig. 2 Carga de secrets en repositorio
 </p>
 
 No tenemos acceso al archivo .tfvars que es donde se encuentran las variables de Terraform, pero podemos acceder a algunas de ellas anteponiendo var. al nombre de la variable.  Las variables a las que podemos acceder son: region, subnet1_zone_1a, ami_id, key1, instance_type, vpc1_id, internet_gateway_id.
@@ -122,5 +125,17 @@ resource "aws_instance" "server1" {
   }
 }
 ```
+## Pull Request
+Una vez realizados los cambios mencionados, realizamos un Pull Request para revisión, corrección y posterior unión a la rama principal del repositorio (main).
+Los demás archivos no fueron modificados en este laboratorio. 
+<p align="center">
+  <img src="/images/pull_request1.jpg"> <br>
+  Fig. 3 Esquema de la VPC al finalizar el laboratorio.
+</p>
 
-Los demás archivos no fueron modificados en este laboratorio.
+## Esquema
+Finalmente presentamos el esquema de la VPC luego de introducir la subnet. Solo modelamos una subnet dado que no conocemos las subnets de los demás grupos
+<p align="center">
+  <img src="/images/esquema_vpc.JPG"> <br>
+  Fig. 4 Esquema de la VPC al finalizar el laboratorio.
+</p>
