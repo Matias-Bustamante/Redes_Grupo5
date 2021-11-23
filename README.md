@@ -132,5 +132,5 @@ Los demás archivos no fueron modificados en este laboratorio.
 Finalmente presentamos el esquema de la VPC luego de introducir la subnet. Solo modelamos una subnet dado que no conocemos las subnets de los demás grupos
 <p align="center">
   <img src="/images/esquema_vpc.JPG"> <br>
-  Fig. 3 Esquema de la VPC al finalizar el laboratorio.
+  Fig. 4 Esquema de la VPC al finalizar el laboratorio.
 </p>
