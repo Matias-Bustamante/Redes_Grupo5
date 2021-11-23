@@ -1,5 +1,3 @@
-# Juego de preguntas y respuestas
-Proyecto final - Informatorio Chaco - Etapa 2: "Programación y desarrollo web".
 # Creación de una subnet con Terraform
 
  * [Introducción](#Introducción)
