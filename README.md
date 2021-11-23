@@ -24,13 +24,13 @@ No tenemos acceso al archivo .tfvars que es donde se encuentran las variables de
 ## Declarando la subnet y asociándola a una tabla de ruteo
 Dado que ya se nos brinda la VPC y el Internet Gateway (IGW) lo único que debemos hacer es crear la subnet y desplegarla. Comenzamos subdividiendo el rango de la VPC.
 VPC (Main 1 VPC): 172.16.0.0/16
-Decidimos utilizar 172.16.0.16/28 de manera que exista suficiente rango para las demás subredes que se vayan a crear en la VPC. Esto significa que el rango usable de IPs es 172.16.0.17/28 - 172.16.0.30/28, 14 hosts. 
+Decidimos utilizar 172.16.5.0/28 de manera que exista suficiente rango para las demás subredes que se vayan a crear en la VPC. Esto significa que el rango usable de IPs es 172.16.5.1/28 - 172.16.5.14/28, 14 hosts. 
 Para definir la subnet en Terraform, creamos el archivo networking.tf y definimos el recurso, nombramos a la subnet “subnet5”:
 
 ```HCL
 resource "aws_subnet" "subnet5" {
   vpc_id                  = var.vpc1_id
-  cidr_block              = "172.16.0.16/28"
+  cidr_block              = "172.16.5.0/28"
   map_public_ip_on_launch = true
 
   availability_zone = var.subnet1_zone_1a
@@ -110,7 +110,7 @@ resource "aws_instance" "server1" {
   subnet_id                   = aws_subnet.subnet5.id
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.allow_http_ssh.id]
-  private_ip                  = "172.16.0.17/28"
+  private_ip                  = "172.16.5.5/28"
   key_name                    = var.key1
   user_data                   = file("user-data.sh")
 
