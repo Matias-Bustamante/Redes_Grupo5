@@ -9,7 +9,7 @@
 El presente laboratorio consiste en crear una subnet en una VPC dada. Se nos brinda la VPC y el workflow de GitHub para desplegar la subnet.
 Primero creamos un repositorio en GitHub e incluímos el workflow. 
 <p align="center">
-  <img src="images/repositorio_inicial.JPG"> <br>
+  <img src="images/repositorio_inicial.jpg"> <br>
   Fig.1 Creación del repositorio en GitHub
 </p>
 
@@ -125,7 +125,7 @@ resource "aws_instance" "server1" {
 Una vez realizados los cambios mencionados, realizamos un Pull Request para revisión, corrección y posterior unión a la rama principal del repositorio (main).
 Los demás archivos no fueron modificados en este laboratorio. 
 <p align="center">
-  <img src="/images/pull_request1.JPG"> <br>
+  <img src="/images/pull_request1.jpg"> <br>
   Fig. 3 Esquema de la VPC al finalizar el laboratorio.
 </p>
 
