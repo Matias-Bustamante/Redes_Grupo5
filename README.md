@@ -4,6 +4,9 @@
  * [Creando la subnet](#Declarando-la-subnet-y-asociándola-a-una-tabla-de-ruteo)
  * [Reglas de tráfico](#Definición-de-reglas-de-tráfico)
  * [Configurando instancia](#Configurando-la-subnet-en-la-instancia-EC2)
+ * [Pull Request](#Pull-Request)
+ * [Esquema](#Esquema)
+
 
 ## Introducción
 El presente laboratorio consiste en crear una subnet en una VPC dada. Se nos brinda la VPC y el workflow de GitHub para desplegar la subnet.
@@ -122,13 +125,14 @@ resource "aws_instance" "server1" {
   }
 }
 ```
+## Pull Request
 Una vez realizados los cambios mencionados, realizamos un Pull Request para revisión, corrección y posterior unión a la rama principal del repositorio (main).
 Los demás archivos no fueron modificados en este laboratorio. 
 <p align="center">
   <img src="/images/pull_request1.jpg"> <br>
   Fig. 3 Esquema de la VPC al finalizar el laboratorio.
 </p>
-
+## Esquema
 Finalmente presentamos el esquema de la VPC luego de introducir la subnet. Solo modelamos una subnet dado que no conocemos las subnets de los demás grupos
 <p align="center">
   <img src="/images/esquema_vpc.JPG"> <br>
