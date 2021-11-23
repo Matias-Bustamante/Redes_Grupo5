@@ -1,6 +1,6 @@
 resource "aws_subnet" "subnet5" {
   vpc_id                  = var.vpc1_id
-  cidr_block              = "172.16.0.16/28"
+  cidr_block              = "172.16.5.0/28"
   map_public_ip_on_launch = true
 
   availability_zone = var.subnet1_zone_1a
