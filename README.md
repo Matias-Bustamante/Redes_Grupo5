@@ -104,7 +104,7 @@ resource "aws_security_group" "allow_http_ssh" {
 }
 ```
 ## Configurando la subnet en la instancia EC2
-Por último, debemos modificar el archivo instance.tf. Es necesario definir el ID de la AMI, tipo de instancia y el ID de la subnet que creamos. Luego hay que especificar el ID de la regla que creamos en el security group, nuestra regla, [aws_security_group.allow_http_ssh.id], este atributo es una lista porque se podrían haber definido más reglas o incluso creado una regla para HTTP y otra para SSH. El atributo private_ip requiere que elijamos una IP dentro del rango de la subnet creada, definimos 172.16.0.17/28. Por último, especificar la clave registrada en amazon para el acceso a la instancia, no la tenemos pero accedemos con var.key1.
+Por último, debemos modificar el archivo instance.tf. Es necesario definir el ID de la AMI, tipo de instancia y el ID de la subnet que creamos. Luego hay que especificar el ID de la regla que creamos en el security group, nuestra regla, [aws_security_group.allow_http_ssh.id], este atributo es una lista porque se podrían haber definido más reglas o incluso creado una regla para HTTP y otra para SSH. El atributo private_ip requiere que elijamos una IP dentro del rango de la subnet creada, definimos 172.16.5.5/28. Por último, especificar la clave registrada en amazon para el acceso a la instancia, no la tenemos pero accedemos con var.key1.
 
 ```HCL
 resource "aws_instance" "server1" {
